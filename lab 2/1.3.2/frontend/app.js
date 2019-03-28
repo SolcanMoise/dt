@@ -5,8 +5,8 @@ var app = new Vue({
         usersService: null
     },
     created: function () {
-        usersService = users();
-        usersService.get().then(response => (this.users = response.data));
+        this.usersService = users();
+        this.usersService.get().then(response => (this.users = response.data));
     },
     methods: {
     }
